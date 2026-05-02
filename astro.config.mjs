@@ -9,7 +9,6 @@ import rehypeKatex from "rehype-katex";
 // https://astro.build/config
 export default defineConfig({
   site: "https://standpot.github.io",
-  base: process.env.BASE_PATH || "",
   integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: {
