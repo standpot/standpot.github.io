@@ -107,7 +107,7 @@ const years = Object.keys(groupedPosts).map(Number).sort((a, b) => b - a);
                                             <span class="archive-date">
                                                 <FormattedDate date={post.data.pubDate} />
                                             </span>
-                                            <a href={url(`/blog/${post.id}/`)} class="archive-link">
+                                            <a href={url(`/projects/${post.id}/`)} class="archive-link">
                                                 {post.data.title}
                                             </a>
                                         </li>

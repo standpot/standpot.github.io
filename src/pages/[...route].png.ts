@@ -12,19 +12,19 @@ export async function getStaticPaths() {
         { params: { route: 'og' }, props: { title: SITE_TITLE, subtitle: SITE_DESCRIPTION } },
         { params: { route: 'about' }, props: { title: 'About', subtitle: SITE_TITLE } },
         { params: { route: 'projects' }, props: { title: 'Projects', subtitle: SITE_TITLE } },
+        { params: { route: 'research' }, props: { title: 'Research', subtitle: SITE_TITLE } },
         { params: { route: 'publications' }, props: { title: 'Publications', subtitle: SITE_TITLE } },
         { params: { route: 'team' }, props: { title: 'Team', subtitle: SITE_TITLE } },
-        { params: { route: 'blog' }, props: { title: 'Blog', subtitle: SITE_TITLE } },
     ];
 
-    // Dynamic blog posts
+    // Dynamic project posts
     const blogPages = posts.map((post) => ({
-        params: { route: `blog/${post.id}` },
-        props: { title: post.data.title, subtitle: 'Blog Post' },
+        params: { route: `projects/${post.id}` },
+        props: { title: post.data.title, subtitle: 'Project' },
     }));
 
     const projectPages = projectsData.map((project) => ({
-        params: { route: `projects/${project.id}` },
+        params: { route: `research/${project.id}` },
         props: { title: project.title, subtitle: 'Research Project' },
     }));
 

@@ -29,12 +29,8 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href={url('/')}>Home</a></li>
                 <li><a href={url('/publications')}>Publications</a></li>
                 <li><a href={url('/projects')}>Projects</a></li>
-                <li><a href={url('/team')}>Team</a></li>
-                <li><a href={url('/blog')}>News</a></li>
-                {cvHref && <li><a href={cvHref} target="_blank">Download CV</a></li>}
             </ul>
         </div>
 
@@ -258,11 +254,10 @@ const cvHref = CV_URL ? url(CV_URL) : null;
 	.site-footer {
 		background-color: var(--color-bg-offset);
 		color: var(--color-text-main);
-		padding: 4rem 1rem;
+		padding: 4rem 1rem 0.75rem;
         margin-top: auto;
         transition: background-color 0.3s ease;
         position: relative;
-        padding-bottom: 0.5% !important;
 	}
 
     .site-footer::before {
@@ -456,7 +451,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
 
     .footer-credit {
         text-align: center;
-        margin-top: 0.25rem;
+        margin-top: 4rem;
         padding-top: 0.5rem;
         border-top: 1px solid var(--color-border);
         font-size: 0.65rem;
